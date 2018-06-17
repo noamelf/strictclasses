@@ -1,6 +1,10 @@
 # strictclasses
 
-This is a validation companion to `dataclasses`. It adds a validation strict
+**Disclaimer: this is beta software, API is not stable.**
+
+This is a validation companion to `dataclasses`. 
+
+It adds the `strict` method to the dataclass to validate the types are correct.
 Usage:
 
 ```python
