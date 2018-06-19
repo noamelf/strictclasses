@@ -1,7 +1,8 @@
 language: python
 python:
   - "3.6"
-install: true
+install: pip install -e .[dev]
+script: pytest
 deploy:
   provider: pypi
   user: noamelf

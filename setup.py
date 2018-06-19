@@ -15,6 +15,7 @@ setup(
     description='A strict companion to dataclasses',
     packages=['strictclasses'],
     install_requires=['dataclasses'],
+    extras_require={'dev': ['pytest']},
     long_description=long_description,
     long_description_content_type='text/markdown'
 )
