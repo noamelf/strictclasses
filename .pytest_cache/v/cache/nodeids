@@ -1,0 +1,3 @@
+[
+  "tests/test_travis.py::test_travis"
+]
