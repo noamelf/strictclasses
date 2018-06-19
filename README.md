@@ -20,3 +20,17 @@ class Foo:
 f = Foo('3')
 f.strict() # -> AssertionError: bar is not an instance of <class 'int'>
 ```
+
+
+```python
+from strictclasses import strict_dataclass
+
+@strict_dataclass
+class Foo:
+    bar: int
+
+
+f = Foo('3') # -> AssertionError: bar is not an instance of <class 'int'>
+f = Foo(3)
+f.bar = 3.3 # -> AssertionError: bar is not an instance of <class 'int'>
+```

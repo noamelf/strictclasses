@@ -6,4 +6,4 @@ __author__ = """Noam Elfanbaum"""
 __email__ = 'noam.elf@gmail.com'
 __version__ = '0.1.0'
 
-from .strictclass import strict
+from .strictclass import strict, strict_dataclass
