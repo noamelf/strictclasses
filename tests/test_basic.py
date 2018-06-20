@@ -11,5 +11,5 @@ def test_strict():
         bar: int
 
     f = Foo('3')
-    with pytest.raises(AssertionError):
-        f.strict()  # -> AssertionError: bar is not an instance of <class 'int'>
+    with pytest.raises(TypeError):
+        f.strict()  # -> TypeError: bar is not an instance of <class 'int'>
