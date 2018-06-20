@@ -8,13 +8,14 @@ with open(path.join(this_directory, 'README.md')) as f:
 
 setup(
     name='strictclasses',
-    version='0.1.3',
+    version='0.1.4',
     url='https://github.com/noamelf/strictclasses',
     author='Noam Elfanbaum',
     author_email='noam.elf@gmail.com',
     description='A strict companion to dataclasses',
     packages=['strictclasses'],
     install_requires=['dataclasses'],
+    extras_require={'dev': ['pytest']},
     long_description=long_description,
     long_description_content_type='text/markdown'
 )
