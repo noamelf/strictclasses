@@ -1,15 +1,16 @@
 import pytest
-from dataclasses import dataclass
 
-from strictclasses import strict
+from strictclasses import strictclass
 
 
 def test_strict():
-    @strict
-    @dataclass
+    @strictclass
     class Foo:
         bar: int
 
-    f = Foo('3')
     with pytest.raises(TypeError):
-        f.strict()  # -> TypeError: bar is not an instance of <class 'int'>
+        Foo('3')
+
+    foo = Foo(3)
+    with pytest.raises(TypeError):
+        foo.bar = '3'

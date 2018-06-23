@@ -2,15 +2,6 @@ from functools import partial
 from dataclasses import dataclass
 
 
-def strict(cls):
-    def _strict(self):
-        for attr, _type in self.__annotations__.items():
-            _StrictData.validator(getattr(self, attr), attr, _type)
-
-    cls.strict = _strict
-    return cls
-
-
 def strictclass(_cls=None, **kwargs):
     """
     wrapper on dataclasses dataclass decorator that add type checking
